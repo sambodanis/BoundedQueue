@@ -37,6 +37,7 @@ std::string *grow(std::string *arr, int & size) {
     for (int i = 0; i < size; i++) {
         newArr[i] = arr[i];
     }
+    delete[] arr;
     size *= 2;
     return newArr;
 }
@@ -119,6 +120,7 @@ void interactive() {
             }
         }
     }
+    if (queue != NULL) delete queue;
 }
 
 bool performTests() {
